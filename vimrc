@@ -29,6 +29,7 @@ Plugin 'VundleVim/Vundle.vim'
 "
 
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'fatih/vim-go'
 
@@ -38,6 +39,12 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'majutsushi/tagbar'
 
 Plugin 'vim-syntastic/syntastic'
+
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'sebdah/vim-delve'
+
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -114,7 +121,17 @@ let g:tagbar_type_go = {
 nmap <F8> :TagbarToggle<CR>
 
 
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
+map <C-K> :bnext<CR>
+map <C-J> :bprev<CR>
+
+
+set hlsearch
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+let g:Airline_theme='papercolor'
+
+let g:airline_powerline_fonts = 1
 
 
